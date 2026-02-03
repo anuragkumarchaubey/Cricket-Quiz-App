@@ -1,47 +1,125 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Background */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
+
+/* Main Container */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
+
+/* Title */
 h1 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #243b55;
 }
+
+/* Question Card */
 .question {
-    margin-bottom: 20px;
+  background: #f4f6ff;
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 22px;
+  transition: 0.3s;
 }
+
+.question:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* Question Text */
 .question p {
-    font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
 }
-.question input {
-    margin-right: 10px;
+
+/* Options */
+label {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
 }
+
+label:hover {
+  background: #e6ebff;
+}
+
+/* Radio Button */
+input[type="radio"] {
+  margin-right: 10px;
+  accent-color: #243b55;
+}
+
+/* Submit Button */
 .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: 0.3s;
 }
+
 .submit-btn:hover {
-    background: #0056b3;
+  transform: scale(1.02);
+  opacity: 0.95;
 }
-.result {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: green;
+
+/* Result Text */
+#out {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #141e30;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .question {
+    padding: 15px;
+  }
+
+  label {
+    font-size: 15px;
+  }
 }
